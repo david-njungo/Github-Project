@@ -1,6 +1,19 @@
 <app-navbar></app-navbar>
 <h1 class="text-center pt-5 fw-5">Welcome to your Github Account</h1>
 <h2 class="text-center text-primary pt-4">This is my profile</h2>
-<app-profile></app-profile>
+<div class="container">
+    <div class="row">
+        <div class="col-5"><img src="{{user.avatar_url}}" height=auto width= 80% alt=""></div>
+        <div class="col text-primary pt-5 fw-4 display-6">
+           Username: {{user.login}}
+            <br>
+            Repositories:{{user.public_repos}}
+            <br>
+            Followers:{{user.followers}}
+            <br>
+            Following:{{user.following}}
+        </div>
+    </div>
+</div>
 
 
