@@ -1,8 +1,9 @@
 <form (ngSubmit)='submitUser()' #goalForm='ngForm'>
-        <input type="text" required class="form-control" id="user"[(ngModel)]="newUser.user"name="name" #username='ngModel' required>
-        <button type="submit" class="btn btn-success">Search User</button>
+        <input type="text" required class="form-control" id="user"[(ngModel)]="newUser.login"name="name" #username='ngModel' required>
+        <button type="submit" class="btn btn-primary">Search User</button>
 </form>
+<br>
 <form (ngSubmit)='submitRepo()' #goalForm='ngForm'>
-    <input type="text" required class="form-control" id="repo"[(ngModel)]="newUser.repo"name="name" #repo='ngModel' required>
-    <button type="submit" class="btn btn-success">Search repository</button>
+    <input type="text" required class="form-control" id="repo"[(ngModel)]="newRepo.name"name="name" #repo='ngModel' required>
+    <button type="submit" class="btn btn-primary">Search repository</button>
 </form>
