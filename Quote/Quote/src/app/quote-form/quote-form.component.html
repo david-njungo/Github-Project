@@ -1,0 +1,38 @@
+<div  class="row">
+    <div class="col-4">
+        <h1 class="py-4 text-black text-center fw-bold text-decoration-underline">Create Quotes</h1>
+        <form  #goalForm='ngForm'(ngSubmit)="saveQuote()">
+            <div class="form-group">
+                <label for="name">Author Name</label>
+                <input type="text" name="authorName" [(ngModel)]='authorName'required class="form-control" id="authorname">
+            </div>
+            <div class="form-group">
+                <label for="name">Author Email</label>
+                <input type="text" name="authorEmail" [(ngModel)]='authorEmail' required class="form-control" id="authoremail">
+            </div>
+            <div class="form-group">
+                <label for="description">Quote</label>
+                <textarea class="form-control" name="quote" [(ngModel)]="quote" id="quote" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Send</button>
+        </form>
+    </div>
+    <div class="col-3">
+    </div>
+    <div class="col-5">
+        <h1 class="py-4 text-black text-center fw-bold text-decoration-underline">Quotes</h1> 
+        <div class="bg-info text-white mb-2" *ngFor="let quote of quotes let i=index">
+          {{newquote.quote}}
+          <br>
+          <button (click)='toggleDetails(i)' class="btn btn-primary">Quote Details</button>
+          <div *ngIf='quote.showDescription' (isComplete) = 'deleteQuote($event,i)'>
+            Author Name: {{newquote.authorName}}
+            <hr>
+             Author email:{{newquote.authorEmail}}
+            <br>
+
+            <button (click)= 'quoteDelete(true)'class="btn btn-lg btn-primary">Delete Quote</button>
+        </div>
+       </div>
+    </div>
+</div>
