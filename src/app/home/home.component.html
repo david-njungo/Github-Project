@@ -1,31 +1,33 @@
 <app-navbar></app-navbar>
-<h1 class="text-center pt-5 fw-5">Welcome to your Github Account</h1>
-<h2 class="text-center text-primary pt-4">This is my profile</h2>
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-            <img src="{{user.avatar_url}}" height=auto width=90% alt="">
-        </div>
-        <div class="col-5 text-primary pt-5 fw-4 display-6">
-            Username: {{user.login}}
-            <br>
-            Repositories:{{user.public_repos}}
-            <br>
-            Followers:{{user.followers}}
-            <br>
-            Following:{{user.following}}
-            <br> 
-            Created at :{{user.created_at|date}}         
-        </div>
-        <div class="col-3">
-            <app-form></app-form>
-        </div>
-        <!-- <div  class="col-6">
+<div class="container-fluid py-3 bg-info">
+    <h1 class="text-center pt-5 fw-5">Welcome to your Github Account</h1>
+    <h2 class="text-center pt-4">This is my profile</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="{{user.avatar_url}}" height=auto width=90% alt="">
+            </div>
+            <div class="col-5 profile text-light pt-5 fw-4 ">
+                Username: {{user.login}}
+                <br>
+                Repositories:{{user.public_repos}}
+                <br>
+                Followers:{{user.followers}}
+                <br>
+                Following:{{user.following}}
+                <br>
+                Created at :{{user.created_at|date}}
+            </div>
+            <div class="col-3">
+                <app-form></app-form>
+            </div>
+            <!-- <div  class="col-6">
             Repository{{repo.name}}
             <br>
             {{repo.description}}
             <br>
             {{repo.url}}
         </div> -->
+        </div>
     </div>
 </div>

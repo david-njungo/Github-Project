@@ -1,3 +1,11 @@
 img{
     border-radius: 50%;
 }
+h1{
+    font-size: 60px;
+}
+.profile{
+    font-style: italic;
+    font-weight: 500;
+    font-size:30px;
+}
